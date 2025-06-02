@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!--基本情報-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Zatuverse Project - 雑談は無限大だ!</title>
+        <link rel="icon" href="./logo.webp">
+        <meta name=”description“ content=“Zatubase Projectは、Mozilla Hubsを活用したオンラインメタバースイベントです。Discordの雑談系コミュニティをつなぐ、新しい形のバーチャル交流イベントです！また独自に改良したシステムにより、仮想空間内での自由な交流を実現しました。“ />
+        <!--css-->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#">トップ</a></li>
+            </ul>
+        </nav>
+        <h1><img src="./logo.webp" alt="logo"></h1>
+        <div id="top">
+            <h2 class="cachecopy"><strong>雑談</strong>は</h2>
+            <h2 class="cachecopy"><strong>無限大</strong>だ!</h2>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function() {
+                $('.hamburger').click(function() {
+                    // メニューの開閉状態を切り替える
+                    $('.menu').toggleClass('open');
+
+                    // ハンバーガーボタンのアクティブクラスを切り替えて三本線をバツにする
+                    $(this).toggleClass('active');
+                });
+            });
+        </script>
+    </body>
+</html>
