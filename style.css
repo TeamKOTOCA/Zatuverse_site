@@ -104,6 +104,10 @@
     border-radius: 50%;
     height: 3em;
 }
+.menubox .links img:hover{
+    box-shadow: #ddd 0px 0px 10px;
+}
+
 h1 img{
     position: absolute;
     bottom: 20px;
