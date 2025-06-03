@@ -22,6 +22,7 @@
 .hamburger {
     border-radius: 50%;
     background: linear-gradient(-50deg, #d2ffe8,#ffd4d5);
+    border: dashed #aaa 2px;
     position: fixed;
     padding: 10px;
     top: 20px;
@@ -29,6 +30,9 @@
     width: 30px;
     cursor: pointer;
     z-index: 20;
+}
+.hamburger:hover{
+    box-shadow: #ddd 0 0 10px;
 }
 .hamburger span {
     display: block;
@@ -40,30 +44,66 @@
 }
 
 /* メニューのスタイル */
-.menu {
+.menubox {
     position: fixed;
     top: 0;
-    right: -100%; /* 初期状態では画面の外に隠れている */
-    width: 300px;
-    height: calc(100% - 40px);
-    background: linear-gradient(-50deg, #d2ffe8,#ffd4d5);
-    color: #333;
-    transition: right 0.2s ease; /* スライドインのアニメーション */
-    padding: 20px;
-    margin: 20px 20px 20px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    box-shadow: #ddd 0 0 10px;
-    border: #ffd4d5 dashed 4px;
-    z-index: 10;
-}
-/* メニューが開いているとき */
-.menu.open {
     right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(-50deg, #e7fff2, #ffebeb);
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+
+    /* アニメーション設定 */
+    transform: scale(0);
+    transform-origin: top right; /* 右上から広がる */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+
+        /* 中央揃え用 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-
-
+/* メニューが開いているとき */
+.menubox.open {
+    transform: scale(1);
+    opacity: 1;
+}
+.menubox ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menubox ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    border-bottom: #333 solid 2px;
+    width: 300px;
+    padding: 1em 0;
+    transition: all 0.2s ease;
+}
+.menubox ul li:last-child a{
+    border: none;
+}
+.menubox ul li a:hover{
+    background-color: #ffffff99;
+}
+.menubox ul li a img{
+    height: 2em;
+}
+.menubox .links img{
+    border-radius: 50%;
+    height: 3em;
+}
 h1 img{
     position: absolute;
     bottom: 20px;

@@ -17,14 +17,36 @@
                 <span></span>
                 <span></span>
             </div>
-            <ul>
-                <li><a href="#">トップ</a></li>
-            </ul>
+            <div class="menubox">
+                <ul>
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="">参加方法</a></li>
+                    <li><a href="">参加サーバー</a></li>
+                    <li><a href="">サーバーマップ</a></li>
+                    <li><a href="">運営メンバー</a></li>
+                    <li><a href=""><img src="./assets/form.png" alt="">鯖参加申請フォーム</a></li>
+                    <li><a href=""><img src="./assets/form.png" alt="">運営メンバー申請フォーム</a></li>
+                </ul>
+                <div class="links">
+                    <a href=""><img src="./assets/discord.png" alt=""></a>
+                </div>
+            </div>
         </nav>
         <h1><img src="./logo.webp" alt="logo"></h1>
         <div id="top">
             <h2 class="cachecopy"><strong>雑談</strong>は</h2>
             <h2 class="cachecopy"><strong>無限大</strong>だ!</h2>
+        </div>
+        <div id="about">
+            <p>
+                Zatuverse Projectは、いろんなDiscordの雑談サーバーが、
+                ひとつの「仮想空間」でつながり、自由におしゃべりできる
+                オンライン交流イベントです。
+
+                3Dの空間に自分のアバターで入り、<br>
+                ほかの人と気軽に話したり、ルームを移動したり、<br>
+                ちょっとした発表や展示を見たりできる、そんな"祭典"を目指しています。
+            </p>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
@@ -32,6 +54,7 @@
                 $('.hamburger').click(function() {
                     // メニューの開閉状態を切り替える
                     $('.menu').toggleClass('open');
+                    $('.menubox').toggleClass('open');
 
                     // ハンバーガーボタンのアクティブクラスを切り替えて三本線をバツにする
                     $(this).toggleClass('active');
